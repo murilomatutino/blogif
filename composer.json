@@ -1,0 +1,17 @@
+{
+    "name": "root/blogif",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Murilo Matutino",
+            "email": "mmatutino617@gmail.com"
+        }
+    ],
+    "require": {
+        "league/plates": "^3.6"
+    }
+}
