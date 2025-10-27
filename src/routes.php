@@ -8,7 +8,7 @@ return [
         '/usuarios' => 'UserController@index',
         '/contact' => 'ContactController@index',
         '/login' => 'LoginController@index',
-        '/logout' => 'LoginController@destroy'
+        '/logout' => 'LoginController@destroy',
     ],
     'POST' => [
         '/contact' => 'ContactController@store',
