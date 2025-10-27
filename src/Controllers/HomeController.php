@@ -9,8 +9,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        User::execute_query('select * from user');
-        //$this->view("Home");
+        $this->view("Home");
     }
 }
 

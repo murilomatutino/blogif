@@ -10,6 +10,12 @@ class User extends Model
     public readonly string $password;
     public readonly string $create_at;
     public readonly string $updated_at;
+
+
+    public static function get_user(string $email)
+    {
+        return ( self::execute_query("select * from user where email='{$email}'") )[0]; // indicie zero para pegar desconsiderar o array que está em volta do objeto
+    }
 }
 
 ?>

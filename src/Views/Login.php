@@ -2,7 +2,7 @@
 
 <h1>Login Page</h1>
 
-<form action="" method="post">
+<form action="/login" method="post">
     <div>
         <label for="login">Login</label>
         <input type="email" name='login'>
