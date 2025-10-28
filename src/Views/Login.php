@@ -13,3 +13,8 @@
     </div>
     <button type='submit'>Entrar</button>
 </form>
+
+
+<?php $this->start('navbar') ?>
+
+<?php $this->stop() ?>
