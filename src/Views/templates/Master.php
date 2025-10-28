@@ -11,6 +11,7 @@
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/post/create">Create post</a></li>
+                <li><a href="/profile">Profile</a></li>
                 <li><a href="/logout">logout</a></li>
             </ul>
         <?php endif ?>
@@ -20,7 +21,7 @@
       <?=$this->section('content')?>
     </main>
     <footer>
-
+        blogif
     </footer>
   </body>
 </html>

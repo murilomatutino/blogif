@@ -9,7 +9,8 @@ return [
         '/contact' => 'ContactController@index',
         '/login' => 'LoginController@index',
         '/logout' => 'LoginController@destroy',
-        '/post/create' => 'PostController@index'
+        '/post/create' => 'PostController@index',
+        '/profile' => 'ProfileController@index'
     ],
     'POST' => [
         '/contact' => 'ContactController@store',
