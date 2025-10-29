@@ -1,6 +1,5 @@
 <?php $this->layout('templates/Master', ['title' => 'Create Post']) ?>
 
-<h1>Create Post</h1>
 <form action="/post/create" method="post">
     <div>
         <label for="title">Title</label>

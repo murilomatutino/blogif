@@ -1,7 +1,5 @@
 <?php $this->layout('templates/Master', ['title' => 'Login Page']) ?>
 
-<h1>Login Page</h1>
-
 <form action="/login" method="post">
     <div>
         <label for="login">Login</label>
@@ -16,7 +14,17 @@
 
 
 <?php $this->start('navbar') ?>
-    <ul>
-        <li><a href="/register">Register</a></li>
-    </ul>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">BlogIF</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/register">Register</a>
+            </li>
+        </ul>
+        </div>
+    </div>
 <?php $this->stop() ?>
