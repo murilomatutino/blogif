@@ -16,3 +16,11 @@ create table post(
     content varchar(600),
     title varchar(100)
 )
+
+create table comment(
+    id int primary key auto_increment,
+    author int,
+    id_post int,
+    content varchar(200),
+    create_at timestamp
+);

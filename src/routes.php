@@ -15,7 +15,8 @@ return [
     'POST' => [
         '/contact' => 'ContactController@store',
         '/login' => 'LoginController@store',
-        '/post/create' => 'PostController@store'
+        '/post/create' => 'PostController@store',
+        '/comment/create' => 'CommentController@store'
     ]
 ];
 

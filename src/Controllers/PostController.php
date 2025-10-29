@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\classes\Post;
 use App\Helpers\classes\Redirect;
+use App\Helpers\classes\Auth;
 
 class PostController extends Controller
 {
@@ -13,12 +14,12 @@ class PostController extends Controller
     }
 
     public function store($request)
-    {
-        session_start();
+    {   
+        $id_user = Auth::get_session('id');
 
-        Post::create_post(
+        Post::create(
             $request->title,
-            $_SESSION['auth']['id'],
+            $id_user,
             $request->content
         );
 

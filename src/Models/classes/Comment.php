@@ -2,31 +2,30 @@
 
 namespace App\Models\classes;
 
-class Post extends Model
+class Comment extends Model
 {
     public readonly int $id;
-    public readonly string $title;
+    public readonly string $id_post;
     public readonly string $author;
     public readonly string $content;
     public readonly string $create_at;
 
-
     public static function all() // pega todos os posts
     {
         return self::execute_query("
-        select p.title, p.content, p.id, u.name as author, p.create_at from post p, user u where p.author = u.id
+        select m.id, m.id_post, m.content, u.name as author from comment m, user u where u.id = m.author;
         ");
     }
 
-    public static function create($title, $author, $content)
+
+    public static function create($id_post, $author, $content)
     {
         $query = " 
-        insert into post(title, author, content, create_at)
+        insert into comment(id_post, author, content, create_at)
         values
-        ('{$title}', '{$author}', '{$content}', now());";
+        ('{$id_post}', '{$author}', '{$content}', now());";
 
         return self::execute_query($query);
     }
 }
-
 ?>

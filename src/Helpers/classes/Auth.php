@@ -41,6 +41,16 @@ class Auth
             Redirect::to('/login');
         }
     }
+
+    public static function get_session($label)
+    {
+        session_start();
+
+        if($_SESSION['auth'])
+        {
+            return $_SESSION['auth'][$label];
+        }
+    }
 }
 
 ?>

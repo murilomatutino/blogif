@@ -13,6 +13,11 @@ class Redirect
     {
         
     }
+
+    public static function refresh()
+    {
+       
+    }
 }
 
 ?>
