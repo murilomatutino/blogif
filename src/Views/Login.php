@@ -17,6 +17,6 @@
 
 <?php $this->start('navbar') ?>
     <ul>
-        <li><a href="#">register</a></li>
+        <li><a href="/register">Register</a></li>
     </ul>
 <?php $this->stop() ?>

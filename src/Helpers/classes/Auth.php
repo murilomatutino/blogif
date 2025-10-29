@@ -42,13 +42,20 @@ class Auth
         }
     }
 
-    public static function get_session($label)
+    public static function get_session($label=null)
     {
         session_start();
 
         if($_SESSION['auth'])
         {
-            return $_SESSION['auth'][$label];
+            if ($label == null)
+            {
+                return $_SESSION['auth'];
+            }
+            else
+            {
+                return $_SESSION['auth'][$label];
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ abstract class Controller
     public function view(string $view, array $data = [])
     {
         // verifica se o usuário está logado
-        if (!Auth::auth() && $view != 'Login')
+        if (!Auth::auth() && $view != 'Login' && $view != 'Register')
         {
             Redirect::to('/login');
         }

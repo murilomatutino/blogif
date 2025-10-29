@@ -2,12 +2,14 @@
 
 namespace App\Controllers;
 
+use App\Helpers\classes\Auth;
+
 class ProfileController extends Controller
 {
     public function index()
     {
-        session_start();
-        $this->view("Profile", ['datas' => $_SESSION['auth']]);
+        $session = Auth::get_session();
+        $this->view("Profile", ['datas' => $session]);
     }
 }
 ?>

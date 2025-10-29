@@ -16,6 +16,16 @@ class User extends Model
     {
         return ( self::execute_query("select * from user where email='{$email}'") )[0]; // indicie zero para pegar desconsiderar o array que está em volta do objeto
     }
+
+    public static function create($name, $email, $password)
+    {
+        $query = " 
+        insert into user(name, email, password, create_at, updated_at)
+        values
+        ('{$name}', '{$email}', '{$password}', now(), now());";
+
+        return self::execute_query($query);
+    }
 }
 
 ?>
