@@ -1,19 +1,20 @@
 <?php $this->layout('templates/Master', ['title' => 'Register Page']) ?>
 
-<form action="/register" method="post">
-    <div>
-        <label for="name">Name</label>
-        <input type="text" name='name'>
-    </div>
-    <div>
-        <label for="email">E-mail</label>
-        <input type="email" name='email'>
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input type="password" name='password'>
-    </div>
-    <button type='submit'>Register</button>
+
+<form  action="/register" method="post">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" aria-describedby="name" name="name">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">E-mail</label>
+    <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
+  </div>
+  <div class="mb-3">
+    <label for="password1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password1" name="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Register</button>
 </form>
 
 <?php $this->start('navbar') ?>

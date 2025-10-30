@@ -26,6 +26,9 @@
                     <a class="nav-link" href="/profile">Profile</a>
                   </li>
                   <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                  </li>
+                  <li class="nav-item">
                     <a class="nav-link" href="/logout">Logout</a>
                   </li>
                 </ul>
@@ -34,7 +37,7 @@
         <?php endif ?>
       </nav>
     </header>
-    <main class="w-100 p-3 d-flex justify-content-center">
+    <main class="w-100 min-vh-100 p-3 d-flex justify-content-center">
       <?=$this->section('content')?>
     </main>
     <footer class="p-3 bg-dark text-white text-center">

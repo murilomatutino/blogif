@@ -16,7 +16,7 @@ class LoginController extends Controller
 
     public function store($request)
     {
-        $login = $request->login;
+        $login = $request->email;
         $password = $request->password;
 
         $user = User::get_user($login);

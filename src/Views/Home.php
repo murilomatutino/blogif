@@ -30,8 +30,8 @@
                         <div>
                             <input type="hidden" name="id_post" value="<?php echo $post->id ?>">
                             <input type="hidden" name="author_comment" value="<?php echo  $id_user ?>">
-                            <input type="text" name="content_comment" required>
-                            <button type="submit">Comment</button>
+                            <input type="text" class="form-control w-50 d-inline me-2" name="content_comment" required>
+                            <button type="submit" class="btn btn-primary">Comment</button>
                         </div>
                     </form>
                 </div>
