@@ -5,25 +5,32 @@
 
 <p><?= $post->content ?></p>
 
-<div class="mt-3"> 
-<h6>Comments</h6>
-<div>
-    <?php foreach ($comments as $comment): ?>
-        <?php if ($comment->id_post == $post->id): ?>
-        <div>
-            <?php echo $comment->content ?>. Author: <?php echo $comment->author ?>
+<section class="mt-5">
+        <div class="card bg-light">
+            <div class="card-body">
+                <!-- Comment form-->
+                <form action="/comment/create" method='post' class="mb-4">
+                    <input type="hidden" name="id_post" value="<?= $post->id ?>">
+                    <input type="hidden" name="author_comment" value="<?= $id_user ?>">
+                    <textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!" name="content_comment" required></textarea>
+                    <button type="submit" class="btn btn-primary mt-3">Comment</button>
+                </form>
+            
+                <?php foreach ($comments as $comment): ?>
+                    <?php if ($comment->id_post == $post->id): ?>
+                    <div>
+                        <!-- Single comment-->
+                        <div class="d-flex mb-2">
+                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                            <div class="ms-3">
+                                <div class="fw-bold"><?= $comment->author ?></div>
+                                <?= $comment->content ?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endif ?>
+                <?php endforeach; ?>                
+            </div>
         </div>
-        <?php endif ?>
-    <?php endforeach; ?>
-</div>
-
-<form action="/comment/create" method='post' class="mt-3">
-    <div>
-        <input type="hidden" name="id_post" value="<?php echo $post->id ?>">
-        <input type="hidden" name="author_comment" value="<?php echo  $id_user ?>">
-        <input type="text" class="form-control w-50 d-inline me-2" name="content_comment" required>
-        <button type="submit" class="btn btn-primary">Comment</button>
-    </div>
-</form>
-</div>
+    </section>
 </div>

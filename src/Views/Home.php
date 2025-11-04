@@ -14,7 +14,7 @@
                     Create: <?php echo $post->create_at ?>
                 </div>
 
-                <a href="post/show?id=<?= $post->id?>" class="btn btn-primary">See more</a>
+                <a href="post/show?id=<?= $post->id?>" class="btn btn-primary mt-2">See more</a>
             </div>
         </div>
     </div>
