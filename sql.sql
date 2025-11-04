@@ -13,9 +13,10 @@ create table post(
     id int primary key auto_increment,
     author int,
     create_at timestamp,
-    content varchar(600),
+    content longtext,
     title varchar(100)
-)
+    summary varchar(100);
+);
 
 create table comment(
     id int primary key auto_increment,

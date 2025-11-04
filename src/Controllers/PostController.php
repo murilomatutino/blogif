@@ -20,7 +20,8 @@ class PostController extends Controller
         Post::create(
             $request->title,
             $id_user,
-            $request->content
+            $request->content,
+            $request->summary
         );
 
         Redirect::to('/');

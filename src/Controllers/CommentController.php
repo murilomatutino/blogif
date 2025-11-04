@@ -15,7 +15,7 @@ class CommentController extends Controller
             $request->content_comment
         );
 
-        Redirect::to('/');
+        Redirect::back();
     }
 }
 

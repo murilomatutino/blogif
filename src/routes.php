@@ -11,7 +11,8 @@ return [
         '/logout' => 'LoginController@destroy',
         '/post/create' => 'PostController@index',
         '/profile' => 'ProfileController@index',
-        '/register' => 'RegisterController@index'
+        '/register' => 'RegisterController@index',
+        '/post/show' => 'ShowPostController@index'
     ],
     'POST' => [
         '/contact' => 'ContactController@store',

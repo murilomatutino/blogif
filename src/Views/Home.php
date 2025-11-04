@@ -7,34 +7,14 @@
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title"><?php echo $post->title ?></h5>
-                <p class="card-text"><?php echo $post->content ?></p>
+                <p class="card-text"><?php echo $post->summary ?></p>
 
                 <div>
                     Author: <?php echo $post->author ?><br>
                     Create: <?php echo $post->create_at ?>
                 </div>
 
-                <div class="mt-3"> 
-                    <h6>Comments</h6>
-                    <div>
-                        <?php foreach ($comments as $comment): ?>
-                            <?php if ($comment->id_post == $post->id): ?>
-                            <div>
-                                <?php echo $comment->content ?>. Author: <?php echo $comment->author ?>
-                            </div>
-                            <?php endif ?>
-                        <?php endforeach; ?>
-                    </div>
-
-                    <form action="/comment/create" method='post' class="mt-3">
-                        <div>
-                            <input type="hidden" name="id_post" value="<?php echo $post->id ?>">
-                            <input type="hidden" name="author_comment" value="<?php echo  $id_user ?>">
-                            <input type="text" class="form-control w-50 d-inline me-2" name="content_comment" required>
-                            <button type="submit" class="btn btn-primary">Comment</button>
-                        </div>
-                    </form>
-                </div>
+                <a href="post/show?id=<?= $post->id?>" class="btn btn-primary">See more</a>
             </div>
         </div>
     </div>

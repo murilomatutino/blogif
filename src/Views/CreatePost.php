@@ -6,6 +6,10 @@
     <input type="text" class="form-control" id="title" aria-describedby="title" name="title">
   </div>
   <div class="mb-3">
+    <label for="summary" class="form-label">Summary</label>
+    <input type="text" class="form-control" id="summary" aria-describedby="summary" name="summary">
+  </div>
+  <div class="mb-3">
     <label for="content" class="form-label">Content</label>
     <textarea name="content" id="content" class="form-control"></textarea>
   </div>

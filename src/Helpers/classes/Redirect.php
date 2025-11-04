@@ -11,12 +11,7 @@ class Redirect
 
     public static function back()
     {
-        
-    }
-
-    public static function refresh()
-    {
-       
+        self::to($_SERVER['HTTP_REFERER']);
     }
 }
 
