@@ -5,7 +5,11 @@ namespace App\Models\classes;
 class User extends Model
 {
     public readonly int $id;
-    public readonly string $name;
+    public readonly string $social_name;
+    public readonly string $first_name;
+    public readonly string $last_name;
+    public readonly string $phone_number;
+    public readonly string $birth_day;
     public readonly string $email;
     public readonly string $password;
     public readonly string $create_at;
@@ -17,12 +21,12 @@ class User extends Model
         return ( self::execute_query("select * from user where email='{$email}'") )[0]; // indicie zero para pegar desconsiderar o array que está em volta do objeto
     }
 
-    public static function create($name, $email, $password)
+    public static function create($social_name, $first_name, $last_name, $phone_number, $birth_day, $email, $password)
     {
         $query = " 
-        insert into user(name, email, password, create_at, updated_at)
+        insert into user(social_name, first_name, last_name, phone_number, birth_day, email, password, create_at, updated_at)
         values
-        ('{$name}', '{$email}', '{$password}', now(), now());";
+        ('{$social_name}','{$first_name}','{$last_name}', '{$phone_number}','{$birth_day}','{$email}', '{$password}', now(), now());";
 
         return self::execute_query($query);
     }

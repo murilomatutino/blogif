@@ -13,7 +13,7 @@ class Comment extends Model
     public static function all() // pega todos os posts
     {
         return self::execute_query("
-        select m.id, m.id_post, m.content, u.name as author from comment m, user u where u.id = m.author;
+        select m.id, m.id_post, m.content, u.social_name as author from comment m, user u where u.id = m.author;
         ");
     }
 

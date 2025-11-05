@@ -15,14 +15,14 @@ class Post extends Model
     public static function all() // pega todos os posts
     {
         return self::execute_query("
-        select p.title, p.summary, p.content, p.id, u.name as author, p.create_at from post p, user u where p.author = u.id
+        select p.title, p.summary, p.content, p.id, u.social_name as author, p.create_at from post p, user u where p.author = u.id
         ");
     }
 
     public static function Specific($id) // pega um post
     {
         return self::execute_query("
-        select p.title, p.content, p.id, u.name as author, p.create_at from post p, user u where p.author = u.id and p.id = '$id'
+        select p.title, p.content, p.id, u.social_name as author, p.create_at from post p, user u where p.author = u.id and p.id = '$id'
         ")[0];
     }
 

@@ -1,7 +1,7 @@
 <?php $this->layout('templates/Master', ['title' => 'Create Post']) ?>
 
 <div class="d-flex w-100 justify-content-center">
-  <form  action="/post/create" method="post" class="border rounded p-3">
+  <form  action="/post/create" method="post" class="border rounded p-3 w-25">
     <div class="mb-3">
       <label for="title" class="form-label">Title</label>
       <input type="text" class="form-control" id="title" aria-describedby="title" name="title">

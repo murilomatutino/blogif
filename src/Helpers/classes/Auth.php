@@ -14,9 +14,13 @@ class Auth
         if(!$_SESSION['auth'])
         {
             $_SESSION['auth'] = [
-                'name' => $user->name,
-                'email' => $user->email,
-                'id' => $user->id
+                'id' => $user->id,
+                'social_name' => $user->social_name,
+                'first_name' => $user->first_name,
+                'last_name' => $user->last_name,
+                'phone_number' => $user->phone_number,
+                'birth_day' => $user->birth_day,
+                'email' => $user->email
             ];
         }
     }

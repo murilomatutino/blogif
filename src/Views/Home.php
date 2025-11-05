@@ -8,12 +8,12 @@
                     <div class="card col-5 mb-5 me-5 p-0">
                         <img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><?php echo $post->title ?></h5>
-                            <p class="card-text"><?php echo $post->summary ?></p>
+                            <h5 class="card-title"><?= $post->title ?></h5>
+                            <p class="card-text"><?= $post->summary ?></p>
 
                             <div>
-                                Author: <?php echo $post->author ?><br>
-                                Create: <?php echo $post->create_at ?>
+                                Author: <?= $post->author ?><br>
+                                Create: <?= $post->create_at ?>
                             </div>
 
                             <a href="post/show?id=<?= $post->id?>" class="btn btn-primary mt-2">See more</a>
