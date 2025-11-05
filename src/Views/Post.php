@@ -22,7 +22,7 @@
                     <div>
                         <!-- Single comment-->
                         <div class="d-flex mb-2">
-                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/1a191a/fff.png&text=<?= $comment->author[0]?>" alt="user profile image" /></div>
                             <div class="ms-3">
                                 <div class="fw-bold"><?= $comment->author ?></div>
                                 <?= $comment->content ?>
