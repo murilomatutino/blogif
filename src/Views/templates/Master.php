@@ -37,7 +37,7 @@
         <?php endif ?>
       </nav>
     </header>
-    <main class="w-100 min-vh-100 p-3 d-flex justify-content-center">
+    <main class="w-100 min-vh-100 mt-3">
       <?=$this->section('content')?>
     </main>
     <footer class="p-3 bg-dark text-white text-center">

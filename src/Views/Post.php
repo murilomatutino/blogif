@@ -1,5 +1,6 @@
 <?php $this->layout('templates/Master', ['title' => 'Post Page']) ?>
 
+<div class="d-flex w-100 justify-content-center mb-5">
 <div class="w-50">
 <h1><?= $post->title ?></h1>
 
@@ -33,4 +34,5 @@
             </div>
         </div>
     </section>
+</div>
 </div>

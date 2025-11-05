@@ -13,7 +13,7 @@
   <div class="container">
     <div class="row gy-4 gy-md-5 gy-lg-0 align-items-md-center">
       <div class="col-12 col-lg-6">
-        <div class="border overflow-hidden">
+        <div class="border rounded overflow-hidden">
           <form action="#!">
             <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
               <div class="col-12">

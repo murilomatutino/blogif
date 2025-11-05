@@ -1,18 +1,19 @@
 <?php $this->layout('templates/Master', ['title' => 'Login Page']) ?>
 
-<form  action="/login" method="post">
-  <div class="mb-3">
-    <label for="email1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
-    <div id="email" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="password" class="form-label">Password</label>
-    <input type="password" class="form-control" id="password" name='password'>
-  </div>
-  <button type="submit" class="btn btn-primary">Log in</button>
-</form>
-
+<div class="d-flex h-50 w-100 justify-content-center align-items-center">
+  <form  action="/login" method="post" class="border rounded p-3">
+    <div class="mb-3">
+      <label for="email1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="email" aria-describedby="email" name="email">
+      <div id="email" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name='password'>
+    </div>
+    <button type="submit" class="btn btn-primary">Log in</button>
+  </form>
+</div>
 
 <?php $this->start('navbar') ?>
     <div class="container-fluid">
