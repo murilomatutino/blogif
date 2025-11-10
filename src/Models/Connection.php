@@ -12,7 +12,7 @@ class Connection
     {
         if(!self::$conn)
         {
-            self::$conn = new PDO("mysql:host=localhost;dbname=blogif", "root", "root", [
+            self::$conn = new PDO("mysql:host=localhost;dbname=blogif", "root", "", [
                 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_OBJ
             ]);
         }

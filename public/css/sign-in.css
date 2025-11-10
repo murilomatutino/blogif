@@ -1,0 +1,83 @@
+html,
+body {
+  height: 100%;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="name"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+
+body {
+        background-color: #ebebeb; /* página */
+      }
+
+      /* Inputs dentro de .form-floating */
+      .form-floating .form-control {
+        background-color: #ffffff;
+        color: #222222;
+        border: 1px solid #0000004b;
+        transition: border-color .15s, box-shadow .15s;
+      }
+
+      .form-control::placeholder {
+        color: #999999;
+      }
+
+      .form-floating .form-control:focus {
+        border-color: #010c07;
+        box-shadow: 0 0 0 .2rem rgba(7, 15, 12, 0.18);
+        outline: none;
+      }
+
+      /* Label flutuante quando o campo tem foco ou está preenchido */
+      .form-floating .form-control:focus ~ label,
+      .form-floating .form-control:not(:placeholder-shown) ~ label {
+        color: #174d33;
+      }
+
+      .form-floating label {
+        color: #666666;
+      }
+
+      /* Botão primário*/
+      .btn-primary {
+        background-color: #009255;
+        border-color: #00bf63;
+        color: #ffffff;
+      }
+
+      .btn-primary:hover,
+      .btn-primary:active,
+      .btn-primary:focus {
+        background-color: #00a450;
+        border-color: #00a450;
+        box-shadow: 0 0 0 .2rem rgba(0,164,80,0.18);
+      }
