@@ -23,24 +23,7 @@
       #fluid-wrap { position: fixed; inset: 0; width:100%; height:100%; pointer-events:none; z-index:0; overflow:hidden; }
       main.form-signin { position: relative; z-index: 1; }
   .fluid-blob { fill: rgba(0, 230, 118, 0.65); }
-  /* config do mouse bola */
-      #cursor-ball {
-        width: 24px;
-        height: 24px;
-        background: rgba(0, 0, 0, 0.85);
-        border-radius: 50%;
-        position: fixed;
-        pointer-events: none;
-        z-index: 9999;
-        transform: translate(-50%, -50%);
-        transition: width 0.10s, height 0.10s, background 0.18s, border-color 0.18s;
-      }
-      #cursor-ball.hover {
-        width: 40px;
-        height: 40px;
-        background: rgba(0, 0, 0, 0.7);
-      }
-      * { cursor: none !important; }
+  
   </style>
 <style>
       /* as config do vidro do meio*/
@@ -62,24 +45,7 @@
       #fluid-wrap { position: fixed; inset: 0; width:100%; height:100%; pointer-events:none; z-index:0; overflow:hidden; }
       main.form-signin { position: relative; z-index: 1; }
   .fluid-blob { fill: rgba(0, 230, 118, 0.65); }
-  /* config do mouse bola */
-      #cursor-ball {
-        width: 24px;
-        height: 24px;
-        background: rgba(0, 0, 0, 0.85);
-        border-radius: 50%;
-        position: fixed;
-        pointer-events: none;
-        z-index: 9999;
-        transform: translate(-50%, -50%);
-        transition: width 0.10s, height 0.10s, background 0.18s, border-color 0.18s;
-      }
-      #cursor-ball.hover {
-        width: 40px;
-        height: 40px;
-        background: rgba(0, 0, 0, 0.7);
-      }
-      * { cursor: none !important; }
+
   </style>
     <div id="fluid-wrap">
       <svg id="fluid-svg" width="100%" height="100%" viewBox="0 0 1600 900" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
