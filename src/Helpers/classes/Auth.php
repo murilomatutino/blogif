@@ -9,18 +9,15 @@ class Auth
 {
     public static function login_as(User $user)
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
 
-        if(!$_SESSION['auth'])
-        {
+        if (!isset($_SESSION['auth'])) {
             $_SESSION['auth'] = [
+                'name' => $user->name,
+                'email' => $user->email,
                 'id' => $user->id,
-                'social_name' => $user->social_name,
-                'first_name' => $user->first_name,
-                'last_name' => $user->last_name,
-                'phone_number' => $user->phone_number,
-                'birth_day' => $user->birth_day,
-                'email' => $user->email
             ];
         }
     }
@@ -28,8 +25,11 @@ class Auth
 
     public static function auth()
     {
-        session_start();
-        return $_SESSION['auth'];
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
+
+        return $_SESSION['auth'] ?? null;
     }
 
     public static function logout()
@@ -48,17 +48,15 @@ class Auth
 
     public static function get_session($label=null)
     {
-        session_start();
+        if (session_status() !== PHP_SESSION_ACTIVE) {
+            session_start();
+        }
 
-        if($_SESSION['auth'])
-        {
-            if ($label == null)
-            {
+        if (isset($_SESSION['auth'])) {
+            if ($label == null) {
                 return $_SESSION['auth'];
-            }
-            else
-            {
-                return $_SESSION['auth'][$label];
+            } else {
+                return $_SESSION['auth'][$label] ?? null;
             }
         }
     }
